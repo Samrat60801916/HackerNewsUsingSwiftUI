@@ -12,9 +12,7 @@ In the last repository, we created the HackerNews Application using MVVM structu
 
   2. **Conforming the ViewModel to @ObservedObject property** so that views can watch the state of an external object, and be notified when something important has changed.
 
-  3. **Marking the hitsArray @Published**  allowing us to create observable object that automatically announces when change occur. SwiftUI will automatically monitor for such changes, and re-invoke the body property of any views that rely on the data. In short, whenever an object with a property marked @Published is changed, all views using that object will be reloaded to reflect those changes.
-
-    Here, since **hitsArray** is marked @Published, it means whenever something was added or removed from items, change announcements are sent as the @Published property wrapper effectively adds a **willSet** property observer to items, so that any changes are automatically sent out to observers.
+  3. **Marking the hitsArray @Published**  allowing us to create observable object that automatically announces when change occur. SwiftUI will automatically monitor for such changes, and re-invoke the body property of any views that rely on the data. In short, whenever an object with a property marked @Published is changed, all views using that object will be reloaded to reflect those changes. Here, since **hitsArray** is marked @Published, it means whenever something was added or removed from items, change announcements are sent as the @Published property wrapper effectively adds a **willSet** property observer to items, so that any changes are automatically sent out to observers.
 
   4. **Creation of a new view- HackerNewsSwiftUIView**
 
